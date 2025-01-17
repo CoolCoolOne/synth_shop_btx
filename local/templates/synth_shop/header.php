@@ -1,24 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+<?php
+
+use Bitrix\Main\Page\Asset;
+?>
+
+<div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
+<!DOCTYPE HTML>
+
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- Bootstrap CSS -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Bootstrap JS + Popper JS -->
-    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <?php $APPLICATION->ShowHead() ?>
+    <title><? $APPLICATION->ShowTitle() ?></title>
+    <?php
+    Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+    Asset::getInstance()->addString('<meta charset="utf-8" />');
+    Asset::getInstance()->addCss(TRO_TEMPLATE_PATH . '/css/bootstrap.min.css');
+    Asset::getInstance()->addJs(TRO_TEMPLATE_PATH . '/js/bootstrap.bundle.min.js');
+
+    // debug(TRO_TEMPLATE_PATH. '/css/bootstrap.min.css');
+    ?>
 </head>
 
 <body>
-    <div class="bg-image" style="background-image: url('./imgs/bg_mb.jpg'); background-size: cover;
+    <div class="bg-image" style="background-image: url('/local/templates/.default/imgs/bg_mb.jpg'); background-size: cover;
            height: 100vh">
         <div class="container  text-white d-flex flex-column min-vh-100">
             <!-- Content here -->
 
-            
+
             <div class="d-flex flex-row-reverse bd-highlight bg-dark pt-3 pe-3">
                 <button type="button" class=" p-2 bd-highlight btn btn-light">Войти</button>
             </div>
@@ -52,7 +62,7 @@
             <div class="d-flex justify-content-between py-2 gap-2 bg-dark px-3 rounded-bottom border-bottom">
 
                 <div>
-                    <img src="./imgs/logo.png" class="img-fluid rounded " width="150" alt="...">
+                    <img src="/local/templates/.default/imgs/logo.png" class="img-fluid rounded " width="150" alt="...">
                 </div>
 
                 <div class="d-flex">
@@ -66,7 +76,7 @@
 
                 <div class="d-flex justify-content-center align-items-center flex-column position-relative">
 
-                    <img src="./imgs/card.png" class="d-flex align-items-center" width="70" alt="товары">
+                    <img src="/local/templates/.default/imgs/card.png" class="d-flex align-items-center" width="70" alt="товары">
                     <div
                         class=" text-white bg-dark fw-bold rounded-circle border border-4 border-white px-2 position-absolute top-0 end-0">
                         5</div>
@@ -77,32 +87,6 @@
              -->
             </div>
 
+            
 
-
-            <footer
-                class=" rounded-top mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-dark text-white">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0  text-decoration-none lh-1">
-                        <svg class="bi" width="30" height="24">
-                            <use xlink:href="#bootstrap"></use>
-                        </svg>
-                    </a>
-                    <span class="mb-3 mb-md-0 ">© 2025 Волшебство звука</span>
-                </div>
-
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex ">
-                    <li class="ms-3"><a class="text-white" href="#">tg</li>
-                    <li class="ms-3"><a class="text-white" href="#">vk</li>
-                    <li class="ms-3"><a class="text-white" href="#">bandcamp</li>
-                </ul>
-            </footer>
-
-        </div>
-    </div>
-
-
-
-
-</body>
-
-</html>
+            
