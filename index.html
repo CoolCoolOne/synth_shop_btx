@@ -15,21 +15,44 @@
 <body>
     <div class="bg-image" style="background-image: url('./imgs/bg_mb.jpg'); background-size: cover;
            height: 100vh">
-        <div class="container pt-4 text-white">
+        <div class="container pt-4 text-white ">
             <!-- Content here -->
             <div class="d-flex flex-row-reverse bd-highlight">
                 <button type="button" class=" p-2 bd-highlight btn btn-light">Войти</button>
             </div>
 
-            <div class="d-flex justify-content-center">
-                <h3>Волшебство звука - синтезаторы</h3>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-2 rounded">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">Волшебство звука</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse fw-bold" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Синтезаторы</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">О нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Доставка</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
-            <div class="d-flex justify-content-center gap-4">
+            <div class="d-flex justify-content-between mt-2 gap-2">
 
                 <div>
-                    <img src="./imgs/logo.png" class="img-fluid rounded " width="200" alt="...">
+                    <img src="./imgs/logo.png" class="img-fluid rounded " width="150" alt="...">
                 </div>
+
                 <div class="d-flex">
                     <form class="d-flex align-items-center">
                         <div class="form-group">
@@ -37,12 +60,20 @@
                         </div>
                     </form>
                 </div>
+
+                <div class="d-flex justify-content-center align-items-center flex-column position-relative">
+
+                    <img src="./imgs/card.png" class="d-flex align-items-center" width="70" alt="товары">
+                    <div class=" text-white bg-dark fw-bold rounded-circle border border-4 border-white px-2 position-absolute top-0 end-0">
+                        5</div>
+                </div>
                 <!-- 
 
 
              -->
             </div>
 
+            
 
         </div>
     </div>
