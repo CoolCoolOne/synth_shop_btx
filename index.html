@@ -15,13 +15,13 @@
 <body>
     <div class="bg-image" style="background-image: url('./imgs/bg_mb.jpg'); background-size: cover;
            height: 100vh">
-        <div class="container pt-4 text-white ">
+        <div class="container  text-white d-flex flex-column min-vh-100">
             <!-- Content here -->
-            <div class="d-flex flex-row-reverse bd-highlight">
+            <div class="d-flex flex-row-reverse bd-highlight bg-dark pt-3 pe-4">
                 <button type="button" class=" p-2 bd-highlight btn btn-light">Войти</button>
             </div>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark mt-2 rounded">
+            <nav class="ps-1 navbar navbar-expand-lg navbar-dark bg-dark pt-2 ">
                 <div class="container-fluid">
                     <a class="navbar-brand fw-bold" href="#">Волшебство звука</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -47,7 +47,7 @@
                 </div>
             </nav>
 
-            <div class="d-flex justify-content-between mt-2 gap-2">
+            <div class="d-flex justify-content-between py-2 gap-2 bg-dark px-3 rounded-bottom border-bottom">
 
                 <div>
                     <img src="./imgs/logo.png" class="img-fluid rounded " width="150" alt="...">
@@ -55,16 +55,18 @@
 
                 <div class="d-flex">
                     <form class="d-flex align-items-center">
-                        <div class="form-group">
+                        <div class="form-group" >
                             <input type="" class="form-control" id="synthSearch" placeholder="Найти модель..">
                         </div>
                     </form>
+                    
                 </div>
 
                 <div class="d-flex justify-content-center align-items-center flex-column position-relative">
 
                     <img src="./imgs/card.png" class="d-flex align-items-center" width="70" alt="товары">
-                    <div class=" text-white bg-dark fw-bold rounded-circle border border-4 border-white px-2 position-absolute top-0 end-0">
+                    <div
+                        class=" text-white bg-dark fw-bold rounded-circle border border-4 border-white px-2 position-absolute top-0 end-0">
                         5</div>
                 </div>
                 <!-- 
@@ -75,7 +77,31 @@
 
             
 
-        </div>
+        <footer
+            class=" rounded-top mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-top bg-dark text-white">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0  text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 ">© 2025 Волшебство звука</span>
+            </div>
+
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3"><a class="" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg></a></li>
+                <li class="ms-3"><a class="" href="#"><svg class="bi" width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg></a></li>
+            </ul>
+        </footer>
+
+    </div>
     </div>
 
 
