@@ -23,8 +23,14 @@ use Bitrix\Main\Page\Asset;
 </head>
 
 <body>
-    <div class="bg-image" style="background-image: url('/local/templates/.default/imgs/bg_mb.jpg'); background-size: cover;
-           height: 100vh">
+    <div class="bg-image" style="background-image: url('/local/templates/.default/imgs/bg_mb.jpg'); background-size: cover; background-attachment: scroll;
+           background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
         <div class="container  text-white d-flex flex-column min-vh-100">
             <!-- Content here -->
 
@@ -33,31 +39,24 @@ use Bitrix\Main\Page\Asset;
                 <button type="button" class=" p-2 bd-highlight btn btn-light">Войти</button>
             </div>
 
-            <nav class="ps-1 navbar navbar-expand-lg navbar-dark bg-dark pt-3 ">
-                <div class="container-fluid">
-                    <a class="navbar-brand fw-bold" href="#">Волшебство звука</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse fw-bold" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Главная</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Синтезаторы</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">О нас</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Доставка</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+           
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "custom_main_menu",
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "COMPONENT_TEMPLATE" => "custom_main_menu",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "1",
+                    "MENU_CACHE_GET_VARS" => array(),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "N",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "top",
+                    "USE_EXT" => "N"
+                )
+            ); ?>
 
             <div class="d-flex justify-content-between py-2 gap-2 bg-dark px-3 rounded-bottom border-bottom">
 
@@ -86,7 +85,3 @@ use Bitrix\Main\Page\Asset;
 
              -->
             </div>
-
-            
-
-            
