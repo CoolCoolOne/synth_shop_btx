@@ -8,21 +8,21 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Игрушки", 
-		"/catalog/", 
+		"Синтезаторы", 
+		"/catalog/studio_sunth/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Обо мне", 
+		"О нас", 
 		"/about/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контакты", 
+		"Доставка", 
 		"/contacts/", 
 		Array(), 
 		Array(), 
